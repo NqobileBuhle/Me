@@ -2,10 +2,12 @@ import React from 'react';
 import drone from "../assets/drone.jpg";
 import school from "../assets/school.jpg";
 import car1 from "../assets/car.jpeg";
+import coverB from '../assets/design.jpg';
 
 function Projects() {
   return (
-    <section id='Projects' className="py-16 bg-white">
+    <section id='Projects' className="py-16 bg-white"
+    style={{ backgroundImage: `url(${coverB})` }}>
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* Projects Header */}
         <div className="text-center mb-12">

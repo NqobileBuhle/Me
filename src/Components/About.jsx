@@ -7,10 +7,13 @@ import typescript from "../assets/typescript.png";
 import plus from "../assets/c++.png";
 import sql from "../assets/sql.jpeg";
 import java2 from "../assets/java.png";
+import coverB from '../assets/design.jpg';
 
 const About = () => {
   return (
-    <section id='About' className="py-16 bg-gray-100">
+    <section id='About' className="py-16 bg-gray-100 "
+    style={{ backgroundImage: `url(${coverB})` }}>
+      
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* About Section */}
         <div className="flex flex-col items-center">

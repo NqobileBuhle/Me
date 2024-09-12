@@ -2,10 +2,12 @@ import React from 'react';
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
+import coverB from '../assets/design.jpg';
 
 const Contact = () => {
   return (
-    <section id="Contact" className="py-16 bg-gray-100">
+    <section id="Contact" className="py-16 bg-gray-100 overflow-hidden bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${coverB})` }}>
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-pink-800 mb-12">CONTACT ME</h2>
 
@@ -54,7 +56,7 @@ const Contact = () => {
                 placeholder="Message"
               ></textarea>
               <button
-                className="w-full py-3 bg-purple-950 text-pink-600 font-semibold rounded-lg hover:text-pink-500 transition duration-200"
+                className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-2 rounded-md shadow-lg transition transform hover:scale-105 hover:shadow-xl"
                 type="submit"
               >
                 Submit
