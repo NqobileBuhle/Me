@@ -1,5 +1,4 @@
 import React from 'react';
-import AboutPic from '../assets/Nqobile.jpeg';
 import css from "../assets/css.png";
 import html from "../assets/html.png";
 import javascript from "../assets/javascript.png";
@@ -14,16 +13,13 @@ const About = () => {
     <section id='About' className="py-16 bg-gray-100">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* About Section */}
-        <div className="paragraph-container flex flex-col md:flex-row items-center justify-between">
-          <div className="Asset w-full md:w-1/3 mb-8 md:mb-0">
-            <img className="rounded-lg shadow-lg object-cover h-80 w-full" src={AboutPic} alt="AboutPic" />
-          </div>
-          <div className="content w-full md:w-2/3 md:pl-12">
+        <div className="flex flex-col items-center">
+          <div className="content w-full md:w-2/3 md:pl-12 text-center">
             <div className="about mb-6">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl font-bold text-pink-800 mb-4">
                 ABOUT ME
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-bold">
                 I'm a passionate and dedicated software developer with a knack for turning
                 complex problems into elegant, efficient solutions. With a strong foundation
                 in JavaScript and a keen interest in developing innovative web applications,
@@ -35,11 +31,11 @@ const About = () => {
               </p>
             </div>
             {/* Skills Section */}
-            <div className="skills mt-8">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+            <div className="mt-8">
+              <h2 className="text-3xl font-bold text-pink-800 mb-6">
                 MY SKILLS
               </h2>
-              <div className="skill_container grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 {/* Skill Cards */}
                 <SkillCard image={css} skillName="CSS" />
                 <SkillCard image={html} skillName="HTML" />
@@ -61,13 +57,14 @@ const About = () => {
 // Skill Card Component
 const SkillCard = ({ image, skillName }) => {
   return (
-    <article className='card2 flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
-      <img className='picture2 w-20 h-20 object-contain mb-4' src={image} alt={skillName} />
-      <span className='skill_name1 text-gray-800 font-medium'>{skillName}</span>
+    <article className='flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300'>
+      <img className='w-20 h-20 object-contain mb-4' src={image} alt={skillName} />
+      <span className='text-pink-800 font-medium'>{skillName}</span>
     </article>
   );
 }
 
 export default About;
+
 
 

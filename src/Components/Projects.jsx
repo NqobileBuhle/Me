@@ -9,7 +9,7 @@ function Projects() {
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         {/* Projects Header */}
         <div className="text-center mb-12">
-          <h1 className='text-4xl font-bold text-gray-800'>PROJECTS</h1>
+          <h1 className='text-4xl font-bold text-pink-800'>PROJECTS</h1>
         </div>
 
         {/* Portfolio Container */}
@@ -42,15 +42,15 @@ function Projects() {
 // Project Card Component
 const ProjectCard = ({ image, title, liveLink, githubLink }) => {
     return (
-      <article className='card bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300'>
+      <article className=' bg-purple-950 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300'>
         <div className='overflow-hidden rounded-t-lg'>
           <img className='picture w-full h-56 object-cover' src={image} alt={title} />
         </div>
         <div className="p-6">
-          <h2 className='card-disc text-2xl font-semibold text-gray-800 mb-4'>{title}</h2>
+          <h2 className='card-disc text-2xl font-semibold text-pink-800 mb-4'>{title}</h2>
           <div className='details flex justify-between'>
-            <a className='card-link-1 text-blue-500 hover:text-blue-700' href={liveLink} target='_blank' rel="noopener noreferrer">Live Demo</a>
-            <a className='card-link-2 text-blue-500 hover:text-blue-700' href={githubLink} target='_blank' rel="noopener noreferrer">Github</a> {/* Fixed this line */}
+            <a className='card-link-1 text-pink-500 hover:text-pink-700' href={liveLink} target='_blank' rel="noopener noreferrer">Live Demo</a>
+            <a className='card-link-2 text-pink-500 hover:text-pink-700' href={githubLink} target='_blank' rel="noopener noreferrer">Github</a> {/* Fixed this line */}
           </div>
         </div>
       </article>
