@@ -1,125 +1,87 @@
-import React from 'react'
-import AboutPic from '../Assets/Nqobile.jpeg'
-import drone from "../Assets/drone.jpg"
-import css from "../Assets/css.png"
-import html from "../Assets/html.png"
-import javascript from "../Assets/javascript.png"
-import react from "../Assets/React1.jpeg"
-import typescript from "../Assets/typescript.png"
-import plus from "../Assets/c++.png"
-import sql from "../Assets/sql.jpeg"
-import java2 from "../Assets/java.png"
+import React from 'react';
+import { MdEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { CiFacebook } from "react-icons/ci";
 
-const About = () => {
+const Contact = () => {
   return (
-    
-    <section id='About'>
-      <div className="paragraph-container">
-      <div className="Asset">
-      {/* <img className="card-img-top" src={AboutPic} alt=" AboutPic"  /> */}
-      </div>
-      <div className="content">
-        <div className="about">
-          <h2>
-            ABOUT ME
-    
-          </h2>
+    <section id="Contact" className="py-16 bg-gray-100">
+      <div className="max-w-4xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">CONTACT ME</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Contact Options */}
+          <div className="space-y-8">
+            <ContactOption
+              Icon={MdEmail}
+              title="Email"
+              details="nqobilebiyela3@gmail.com"
+              linkText="Send Email"
+              href="mailto:NqobileBiyela3@gmail.com"
+            />
+            <ContactOption
+              Icon={FaPhoneAlt}
+              title="Phone"
+              details="0685119703"
+              linkText="Call Me"
+              href="tel:+0685119703"
+            />
+            <ContactOption
+              Icon={CiFacebook}
+              title="Facebook"
+              details="nqobilebiyela3@gmail.com"
+              linkText="Send Message"
+              href="https://www.facebook.com/nqobilebiyela3"
+            />
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white p-8 shadow-md rounded-lg">
+            <form className="space-y-4">
+              <input
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="text"
+                placeholder="Your Full Name"
+              />
+              <input
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type="email"
+                placeholder="Email"
+              />
+              <textarea
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                rows="4"
+                placeholder="Message"
+              ></textarea>
+              <button
+                className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-200"
+                type="submit"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="paragraph">
-        <p >
-         I'm  a passionate and dedicated software developer with a knack for turning 
-         complex problems into elegant, efficient solutions. With a strong foundation 
-         in JavaScript and a keen interest in developing innovative web applications, 
-         I thrive on creating seamless user experiences and robust backend systems.
-         I started my journey in software development 2 years ago, driven by a curiosity for technology 
-         and a desire to make a tangible impact through code. Over the years, 
-         I have honed my skills through various projects, both personal and professional, 
-         constantly learning and adapting to new technologies and methodologies.
-      </p>
-       
-      <div className="skills">
-        <h2>
-          MY SKILLS
-        </h2>
-        <div className="skill_container">
-
-
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={css} alt="" />
-    </div>
-   <span className='skill_name1'>CSS</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={html} alt="" />
-    </div>
-    <span className='skill_name1'>HTML</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={javascript} alt="" />
-    </div>
-    <span className='skill_name1'>Javascript</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={react} alt="" />
-    </div>
-    <span className='skill_name1'>React.JS</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={typescript} alt="" />
-    </div>
-    <span className='skill_name1'>Typescript</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={plus} alt="" />
-    </div>
-    <span className='skill_name1'>C++</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={sql} alt="" />
-    </div>
-    <span className='skill_name1'>SQL/PLSQL</span>
-    
-
-     </article>
-     <article className='card2'>
-    <div>
-        <img className='picture2' src={java2} alt="" />
-    </div>
-    <span className='skill_name1'>Java</span>
-    
-
-     </article>
-      
       </div>
-
-        </div>
-        
-        
-      </div>
-    </div>
-    </div>
     </section>
   );
-}
+};
 
-export default About
+// Reusable Contact Option Component
+const ContactOption = ({ Icon, title, details, linkText, href }) => (
+  <article className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow-md">
+    <Icon className="text-3xl text-blue-500" />
+    <div>
+      <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
+      <h5 className="text-gray-600">{details}</h5>
+      <a href={href} className="text-blue-500 hover:underline">
+        {linkText}
+      </a>
+    </div>
+  </article>
+);
+
+export default Contact;
+
+
 

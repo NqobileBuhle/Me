@@ -1,24 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
+  // Get the current year
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className='footer-content'>
-        <footer>
-        <hr />
-        <p className='footer-text'>
-            
-        Would love to meet other software developers to get job done.
-        <br />
-        <p className='fotter_logo'>
+    <footer className="footer-content py-6 bg-gray-800 text-white text-center">
+      <hr className="mb-4 border-gray-600" />
       
-              Nqobile Biyela &copy; <em id="date"></em>Copyright Reserved
-              </p>
+      <p className="footer-text mb-2">
+        Would love to meet other software developers to get jobs done.
       </p>
       
+      <p className="footer_logo">
+        Nqobile Biyela &copy; {currentYear} All Rights Reserved
+      </p>
     </footer>
-      
-    </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
+
