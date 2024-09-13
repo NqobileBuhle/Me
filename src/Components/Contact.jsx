@@ -2,16 +2,48 @@ import React from 'react';
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiFacebook } from "react-icons/ci";
+import { motion } from 'framer-motion';  // Import Framer Motion
 import coverB from '../assets/design.jpg';
+
+// Animation Variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+const staggerContainer = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const Contact = () => {
   return (
-    <section id="Contact" className="py-16 bg-gray-100 overflow-hidden bg-cover bg-center bg-no-repeat"
-    style={{ backgroundImage: `url(${coverB})` }}>
+    <section
+      id="Contact"
+      className="py-16 bg-gray-100 overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${coverB})` }}
+    >
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-pink-800 mb-12">CONTACT ME</h2>
+        <motion.h2
+          className="text-4xl font-bold text-center text-pink-800 mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          CONTACT ME
+        </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {/* Contact Options */}
           <div className="space-y-8">
             <ContactOption
@@ -38,20 +70,23 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 shadow-md rounded-lg">
+          <motion.div
+            className="bg-white p-8 shadow-md rounded-lg"
+            variants={fadeInUp}
+          >
             <form className="space-y-4">
               <input
-                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-200"
                 type="text"
                 placeholder="Your Full Name"
               />
               <input
-                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-200"
                 type="email"
                 placeholder="Email"
               />
               <textarea
-                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
+                className="w-full p-3 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all duration-200"
                 rows="4"
                 placeholder="Message"
               ></textarea>
@@ -62,16 +97,20 @@ const Contact = () => {
                 Submit
               </button>
             </form>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
-// Reusable Contact Option Component
+// Reusable Contact Option Component with Animation
 const ContactOption = ({ Icon, title, details, linkText, href }) => (
-  <article className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow-md">
+  <motion.article
+    className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
+    whileHover={{ scale: 1.05, boxShadow: "0px 8px 24px rgba(0, 0, 0, 0.1)" }}  // Hover Effect
+    variants={fadeInUp}
+  >
     <Icon className="text-3xl text-pink-500" />
     <div>
       <h4 className="text-lg font-semibold text-pink-800">{title}</h4>
@@ -80,10 +119,7 @@ const ContactOption = ({ Icon, title, details, linkText, href }) => (
         {linkText}
       </a>
     </div>
-  </article>
+  </motion.article>
 );
 
 export default Contact;
-
-
-
