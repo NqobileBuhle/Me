@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";  // Import motion from Framer Motion
 import "../index.css";
 import myPic from '../assets/profile.jpeg';
-import CV from "../assets/Nqobile Biyela.docx";
+import CV from "../assets/resume.pdf";
 import coverB from '../assets/design.jpg';
 
 // Variants for animations
