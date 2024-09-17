@@ -56,7 +56,7 @@ const Home = () => {
         >
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
             Hello, <br />
-            <span className="text-5xl md:text-6xl text-pink-600">I'm Nqobile</span>
+            <span className="text-5xl md:text-6xl text-pink-600">I am Nqobile</span>
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mt-2">
             FULL STACK SOFTWARE DEVELOPER

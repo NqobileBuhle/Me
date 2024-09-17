@@ -44,7 +44,7 @@ const About = () => {
         >
           <motion.div className="content w-full md:w-2/3 md:pl-12 text-center" variants={fadeInUp}>
             <div className="about mb-12">
-              <h2 className="text-3xl font-bold text-pink-800 mb-12 ">
+              <h2 className="text-3xl font-bold text-pink-800 mb-12 mt-5 ">
                 ABOUT ME
               </h2>
               <p className="text-white leading-relaxed text-bold">

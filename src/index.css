@@ -8,7 +8,7 @@
 .App {
     position: relative;
     min-height: 100vh; /* Ensure the App container covers the full viewport height */
-    overflow: hidden; /* Prevent scrollbars from appearing due to background image overflow */
+    /* overflow: hidden; Prevent scrollbars from appearing due to background image overflow */
 }
 
 .background-image {

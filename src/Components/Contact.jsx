@@ -35,7 +35,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          CONTACT ME
+          LET'S GET IN TOUCH!
         </motion.h2>
 
         <motion.div
@@ -104,7 +104,7 @@ const Contact = () => {
   );
 };
 
-// Reusable Contact Option Component with Animation
+//  Component with Animation
 const ContactOption = ({ Icon, title, details, linkText, href }) => (
   <motion.article
     className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"

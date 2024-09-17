@@ -7,7 +7,7 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import './index.css';
-import coverB from './assets/coverB.jpg'; // Import the image
+import coverB from './assets/coverB.jpg'; 
 
 function App() {
     return (

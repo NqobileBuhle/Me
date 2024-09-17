@@ -14,7 +14,7 @@ const NavBar = () => {
     <nav className="flex justify-between items-center px-8 py-4 bg-purple-950 shadow-md fixed w-full z-10">
       {/* Logo Section */}
       <div className="logo text-2xl font-bold text-pink-800">
-        <span>BIYELA.NN</span>
+        <span>NN.BIYELA</span>
       </div>
 
       {/* Hamburger Menu Icon for Mobile */}
