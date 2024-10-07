@@ -22,7 +22,7 @@ function App() {
                 
                 {/* Sections with IDs for smooth scrolling */}
                 <Home id="Intro" />
-                <About id="About" /> 
+                {/* <About id="About" />  */}
                 <Projects id="Projects" />
                 <Contact id="Contact" /> 
                 <Footer />

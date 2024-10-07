@@ -63,7 +63,7 @@ const Contact = () => {
             <ContactOption
               Icon={CiFacebook}
               title="Facebook"
-              details="nqobilebiyela3@gmail.com"
+              details=""
               linkText="Send Message"
               href="https://www.facebook.com/nqobilebiyela3"
             />

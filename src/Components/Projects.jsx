@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import drone from "../assets/drone.jpg";
 import school from "../assets/school.jpg";
 import car1 from "../assets/car.jpeg";
-import newProjectImage from "../assets/design.jpg";  // New project image
+import newProjectImage from "../assets/design.jpg";  
 import coverB from '../assets/design.jpg';
 import me from '../assets/Nqoh.jpeg'
 import project from '../assets/Nqobile.jpeg'
@@ -64,24 +64,24 @@ function Projects() {
             liveLink="" 
             githubLink="https://github.com/NqobileBuhle/Online-Cars-Project.git" 
           />
-          {/* New Project Card */}
+          
           <ProjectCard 
-            image={newProjectImage}  // New project image
+            image={newProjectImage}  
             title="New Project" 
-            liveLink="https://example.com"  // Example live link
-            githubLink="https://github.com/NqobileBuhle/New-Project.git"  // Example GitHub link
+            liveLink="https://example.com"  
+            githubLink="https://github.com/NqobileBuhle/New-Project.git"  
           />
            <ProjectCard 
-            image={me}  // New project image
+            image={me}  // 
             title="New Project" 
-            liveLink="https://example.com"  // Example live link
-            githubLink="https://github.com/NqobileBuhle/New-Project.git"  // Example GitHub link
+            liveLink="https://example.com"  
+            githubLink="https://github.com/NqobileBuhle/New-Project.git"   
           />
            <ProjectCard 
-            image={project}  // New project image
+            image={project}  
             title="New Project" 
-            liveLink="https://example.com"  // Example live link
-            githubLink="https://github.com/NqobileBuhle/New-Project.git"  // Example GitHub link
+            liveLink="https://example.com"  
+            githubLink="https://github.com/NqobileBuhle/New-Project.git"  
           />
         </motion.div>
       </div>

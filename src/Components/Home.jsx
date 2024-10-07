@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";  // Import motion from Framer Motion
+import { motion } from "framer-motion";  
 import "../index.css";
 import myPic from '../assets/profile.jpeg';
 import CV from "../assets/resume.pdf";

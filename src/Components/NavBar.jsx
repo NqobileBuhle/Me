@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <nav className="flex justify-between items-center px-8 py-4 bg-purple-950 shadow-md fixed w-full z-10">
-      {/* Logo Section */}
+      
       <div className="logo text-2xl font-bold text-pink-800">
         <span>NN.BIYELA</span>
       </div>
@@ -39,12 +39,12 @@ const NavBar = () => {
         >
           HOME
         </a>
-        <a
+        {/* <a
           className="nav-options text-pink-700 hover:text-pink-500 transition duration-300"
           href="#About"
         >
           ABOUT
-        </a>
+        </a> */}
         <a
           className="nav-options text-pink-700 hover:text-pink-500 transition duration-300"
           href="#Projects"
